@@ -2,7 +2,7 @@
 
 # Install dependencies : 
 
-`` pip install requirements.txt``
+`` pip install tqdm,matplotlib,pandas,torch,torchvision,requests,Pillow``
 
 # Launch : 
 
