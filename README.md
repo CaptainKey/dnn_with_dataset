@@ -1,19 +1,20 @@
 # NEURAL NETWORK WITH DATASET
 
-Install dependencies : 
+# Install dependencies : 
 
 `` pip install requirements.txt``
 
-Launch : 
+# Launch : 
 
 `` python3 main.py ``
 
-Neural Network with dataset
+# optional arguments:
+```
 
-optional arguments:
-  -h, --help          show this help message and exit
+  -h, --help          show this help message and exit 
   --epochs [int]      nb epochs for training
   --train [int]       1 for training 0 for testing
   --checkpoint [str]  path to checkpoint file
   --batch [int]       batch argument for training and testing
   --arch [str]        name of network architecture to use
+```
