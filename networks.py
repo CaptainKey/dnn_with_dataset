@@ -17,8 +17,8 @@ class Network(nn.Module):
         self.fc3 = nn.Linear(84, 10)
 
     def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
+        x = self.pool(F.relu(self.batchNorm1(self.conv1(x))))
+        x = self.pool(F.relu(self.batchNorm2(self.conv2(x))))
         x = x.view(-1, 16 * 4 * 4)
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
@@ -38,7 +38,7 @@ class NetworkWithBlock(nn.Module):
     def forward(self, x):
         
         x = self.block1(x)
-        x = self.block1(x)
+        x = self.block2(x)
         x = x.view(-1, 16 * 4 * 4)
         x = self.block3(x)
         x = self.block4(x)
